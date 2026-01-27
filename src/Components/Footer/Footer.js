@@ -15,9 +15,9 @@ function Footer() {
 
                 <div className='containerTexto'>
                 <Nav.Link className="link" href="/#adsorbente">Adsorbente</Nav.Link>
-<Nav.Link className="link" href="/#evidencia">Evidencia</Nav.Link>
-<Nav.Link className="link" href="/#calidad">Calidad</Nav.Link>
-<Nav.Link className="link" href="/#contacto">Contacto</Nav.Link>
+                <Nav.Link className="link" href="/#evidencia">Evidencia</Nav.Link>
+                <Nav.Link className="link" href="/#calidad">Calidad</Nav.Link>
+                <Nav.Link className="link" href="/#contacto">Contacto</Nav.Link>
             </div>
 
             <div className='galide'>

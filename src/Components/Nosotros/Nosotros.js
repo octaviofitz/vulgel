@@ -6,7 +6,7 @@ function Nosotros() {
     return (
         <section className='nosotros' id='adsorbente'>
         <div className='containerTitulo'>
-            <h2 className='titulo'>El Adsorbente natural de alto rendimiento</h2>
+            <h2 className='titulo'>Adsorbente natural de alto rendimiento</h2>
             </div>
 
             <div className='containerTexto'>
