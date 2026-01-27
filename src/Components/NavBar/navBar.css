@@ -1,0 +1,96 @@
+.navBar {
+  padding: 8px 3px 10px;
+}
+
+.navBar .logo {
+  height: 3.75vh !important;
+}
+
+.navBar .link {
+  color: #ff5a34;
+  text-align: center;
+  padding: 10px;
+  text-transform: uppercase;
+
+  /* 🔽 Subrayado custom con control total */
+  position: relative;
+  display: inline-block;     /* asegura que el ::after tome el ancho del texto */
+  text-decoration: none;     /* sin subrayado nativo */
+}
+
+.navBar .link::after {
+  content: "";
+  position: absolute;
+  left: 15%;
+  right: 0;
+  height: 3px;
+  width: 70%;
+  background: #636e50;
+  bottom: -1.5px;              /* 🔑 bajá o subí la línea (ej: -6, -10) */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .2s ease;
+}
+
+.navBar .link:hover::after,
+.navBar .link:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.navbar-toggler {
+  font-size: 0.9rem;
+  color: #636e50;
+  border: transparent;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+  color: #636e50;
+}
+
+.w-100 {
+  margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+  .navBar {
+    padding: 0.4rem 1rem 0.7rem !important;
+  }
+
+  .navBar .logo {
+    height: 4vh !important;
+    padding-left: 2rem !important;
+    margin-top: 0rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navBar {
+    padding: 15px 0 18px !important;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navBar .logo {
+    width: 15vw;
+  }
+
+  .navBar .link {
+    padding: 3px 10px;
+    border-right: 1px solid #636e50;
+  }
+
+  .navBar .link:last-child {
+    border-right: none;
+  }
+
+  /* Alinear enlaces a la derecha en desktop */
+  .navBar .navbar-collapse {
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1440px) {
+  .navBar .logo {
+    width: 12vw;
+  }
+}

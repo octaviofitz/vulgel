@@ -1,0 +1,82 @@
+.contacto{
+    background-color: #d0d0d0;
+    padding: 2rem;
+}
+
+.contacto .titulo{
+    color: #ff5a34;
+    font-family: 'MontrealBold';
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+}
+
+.contacto .texto{
+    padding-bottom: 2rem;
+    font-size: 1.15rem;
+}
+
+.contacto .texto:last-child{
+    margin-top: -2.5rem;
+    padding-bottom: 1rem;
+}
+
+.contacto .box{
+    margin-left: -1.5vw;
+}
+
+.contacto .boton{
+    display: flex;
+    margin: 1.5rem auto;
+    background-color: #ff5a34;
+    color: white;
+    font-size: 0.9rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    font-weight: 400;
+}
+
+.contacto .boton:hover{
+    color: white;
+    font-weight: 600;
+}
+
+.containerIMG{
+    display: none;
+}
+
+.contacto .negrita{
+    color: #ff5a34;
+    font-weight: 900;
+}
+
+
+@media(min-width: 768px){
+    .contacto{
+        padding: 5vh 10vw;
+    }
+}
+
+@media(min-width: 1024px){
+    .contacto{
+        display: flex;
+        justify-content: space-between;
+        padding: 8vh 10vw;
+        padding-bottom: 6vh;
+    }
+
+    .contacto .containerTexto{
+        width: 35vw;
+    }
+
+    .contacto .containerBox{
+        width: 35vw;
+    }
+
+    .contacto .titulo{
+        font-size: 6vh;
+    }
+
+    .contacto .texto{
+        font-size: 1.2rem;
+        margin-right: 1rem;
+    }
+}

@@ -1,0 +1,67 @@
+.evidencia{
+    background-color: #d0d0d0;
+    padding: 3rem 2rem;
+}
+
+.evidencia .titulo{
+    color: #ff5a34;
+    font-family: 'MontrealBold';
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+}
+
+.evidencia .listado{
+    margin-top: 0.8rem;
+}
+
+@media(min-width: 768px){
+    .evidencia{
+        padding: 5vh 10vw;
+    }
+}
+
+@media(min-width: 1024px){
+    .evidencia{
+        display: flex;
+        gap: 4vw; /* espacio entre título y texto */
+        align-items: flex-start; /* o center si querés centrar verticalmente */
+        padding: 7vw;
+    }
+
+    .evidencia .containerTitulo{
+        width: 25vw;
+    }
+
+    .evidencia .titulo{
+        font-size: 3rem; /* más impacto visual */
+        line-height: 1.1;
+        padding-right: 10rem;
+    }
+
+    .evidencia .containerTexto{
+        flex: 1; /* ocupa el resto del espacio */
+    }
+
+}
+
+@media (min-width: 1440px){
+
+    .evidencia{
+        padding: 6vw 10vw;
+    }
+
+    .evidencia .containerTitulo{
+        width: 25vw;
+    }
+
+    .evidencia .titulo{
+        font-size: 4.25rem; /* más impacto visual */
+        line-height: 1.1;
+        padding-right: 5rem;
+    }
+
+    .evidencia .texto,
+    .evidencia .items{
+        font-size: 1.2rem;
+    }
+}

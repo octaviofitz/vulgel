@@ -1,0 +1,25 @@
+.calidad{
+    background-color: white;
+    padding: 0rem 2rem 3rem;
+}
+
+.calidad .titulo{
+    font-family: 'MontrealBold';
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    color: #636e50;
+}
+
+.calidad .listado{
+    margin-top: 1rem;
+}
+
+@media(min-width: 768px){
+    .calidad{
+        padding: 2vh 10vw 5vh;
+    }
+
+    .calidad .items{
+        font-size: 1.15rem;
+    }
+}

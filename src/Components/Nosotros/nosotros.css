@@ -1,0 +1,65 @@
+.nosotros{
+    padding: 2rem;
+    background-color: #fff;
+    /* border-bottom: 4px solid #efca16;
+    border-top: 4px solid #efca16; */
+}
+
+.nosotros .titulo{
+    color: #636e50;
+    font-family: 'MontrealBold';
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+}
+
+.nosotros .texto{
+    font-size: 1.15rem;
+}
+
+@media(min-width: 768px){
+    .nosotros{
+        padding: 5vh 10vw;
+    }
+}
+
+@media (min-width: 1024px){
+    .nosotros{
+        display: flex;
+        gap: 4vw; /* espacio entre título y texto */
+        align-items: flex-start; /* o center si querés centrar verticalmente */
+        padding: 7vw;
+    }
+
+   .nosotros .containerTitulo{
+        width: 25vw;
+    }
+
+    .nosotros .titulo{
+        font-size: 3rem; /* más impacto visual */
+        line-height: 1.1;
+    }
+
+   .nosotros .containerTexto{
+        flex: 1; /* ocupa el resto del espacio */
+    }
+}
+
+@media (min-width: 1440px){
+
+    .nosotros{
+        padding: 6vw 10vw;
+    }
+
+    .nosotros .containerTitulo{
+        width: 25vw;
+    }
+
+    .nosotros .titulo{
+        font-size: 4.25rem; /* más impacto visual */
+        line-height: 1.1;
+    }
+
+    .nosotros .texto{
+        font-size: 1.4rem;
+    }
+}

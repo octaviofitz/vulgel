@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+  font-family: 'MontrealMedium';
+  font-weight: 200;
+}
+
+strong{
+  font-weight: 700;
+}
+
+.items{
+  padding: 0.45rem;
+}
+
+ul{
+  padding-left: 1rem;
+}
+
+
+@font-face {
+  font-family: 'MontrealBold';
+  src: url('./Fonts/Montreal/NeueMontreal-Bold.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MontrealMedium';
+  src: url('./Fonts/Montreal/NeueMontreal-Medium.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+

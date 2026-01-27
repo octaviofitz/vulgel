@@ -1,0 +1,130 @@
+.header {
+  position: relative;
+  width: 100%;
+  height: 65vh;
+  overflow: hidden;
+  isolation: isolate; /* asegura capas independientes */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* IMAGEN AL FONDO */
+.banner {
+  position: absolute;
+  inset: 0;         /* top/right/bottom/left: 0 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;       /* debajo del overlay y del texto */
+  pointer-events: none; /* no intercepta clics/scroll */
+}
+
+/* OVERLAY OSCURO */
+.header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  pointer-events: none; /* clave: no tapa el botón */
+}
+
+/* TÍTULO */
+.header .titulo {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  color: #fff;
+  font-weight: 600;
+  font-family: "Unbounded", sans-serif;
+  font-size: 50px;
+  padding: 0 3vw;
+}
+
+/* SUBTÍTULO (selector correcto: es h2 hermano) */
+.header .subitutlo {
+  position: relative;
+  z-index: 2;
+  margin: 0.75rem 0 0;
+  color: #fff;
+  font-weight: 400;
+  font-family: 'MontrealBold';
+  font-size: 26px;
+  padding: 0 3vw;
+}
+
+/* LINK DEL NAV (por si bootstrap mete estilos raros) */
+.header .nav-link {
+  position: relative;
+  z-index: 2;
+  padding: 0;
+  margin-top: 1.75rem;
+  text-decoration: none;
+}
+
+/* BOTÓN BOOTSTRAP */
+.header .btn-secondary {
+  position: relative;
+  z-index: 2;
+  background-color: #ff5a34;
+  border: none;
+  padding: 0.75rem 2rem;
+  text-align: center;
+  display: inline-flex;      /* mejor que flex acá */
+  align-items: center;
+  justify-content: center;
+  margin: 0;                 /* el margen lo maneja .nav-link */
+  font-size: 3.25vw;
+}
+
+.header .btn-secondary:hover {
+  background-color: #636e50!important;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  .header .titulo {
+    font-size: 50px;
+    padding: 0 5vw;
+  }
+
+  .header .subitutlo {
+    font-size: 26px;
+    padding: 0 5vw;
+  }
+
+  .header .btn-secondary {
+    font-size: 2vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header .titulo {
+    font-size: 70px;
+  }
+
+  .header .subitutlo {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header .titulo {
+    font-size: 85px;
+  }
+
+  .header .subitutlo {
+    font-size: 34px;
+  }
+
+  .header .btn-secondary {
+    font-size: 1vw;
+  }
+
+  .header .btn-secondary:hover {
+    background-color: #ff5a34;
+  }
+}
