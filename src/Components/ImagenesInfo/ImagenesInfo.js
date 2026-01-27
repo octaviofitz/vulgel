@@ -12,15 +12,15 @@ function ImagenesInfo() {
         <section className='cards'>
             
             <div>
-                <img src={Card1} alt='' className='img' />
+                <img src={Card1} alt='banner1' className='img' />
                     </div>
 
                     <div>
-                <img src={Card2} alt='' className='img' />
+                <img src={Card2} alt='banner2' className='img' />
                     </div>
 
                     <div>
-                <img src={Card3} alt='' className='img' />
+                <img src={Card3} alt='banner3' className='img' />
                     </div>
             
         </section>
