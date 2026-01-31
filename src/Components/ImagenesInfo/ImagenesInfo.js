@@ -9,7 +9,7 @@ import './imagenesInfo.css';
 function ImagenesInfo() {
     return (
         
-        <section className='cards'>
+        <section className='imagenesInfo'>
             
             <div>
                 <img src={Card1} alt='banner1' className='img' />

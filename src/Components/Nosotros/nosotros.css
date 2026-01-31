@@ -27,7 +27,7 @@
         display: flex;
         gap: 4vw; /* espacio entre título y texto */
         align-items: flex-start; /* o center si querés centrar verticalmente */
-        padding: 7vw;
+        padding: 5vw 7vw;
     }
 
    .nosotros .containerTitulo{
@@ -48,7 +48,7 @@
 @media (min-width: 1440px){
 
     .nosotros{
-        padding: 6vw 10vw;
+        padding: 4vw 10vw;
     }
 
     .nosotros .containerTitulo{

@@ -1,10 +1,10 @@
-.cards{
+.imagenesInfo{
     display: flex;
     flex-direction: column;
     margin: 0rem 0 3rem;
     background-color: white;
 }
 
-.cards .img{
+.imagenesInfo .img{
     width: 100%;
 }
