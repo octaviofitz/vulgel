@@ -102,10 +102,78 @@
     color: black;
     font-weight: 650;
   }
+
+
+
+
+
+  .contenedor-tabla {
+    width: 100%;
+    max-width: 1000px;     /* más ancha en desktop */
+    margin: 2rem auto 0; /* centrada */
+    overflow-x: auto;
+    background-color: #ffffff;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+  
+  .tabla-especificaciones {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.9rem;
+    color: #1a1a1a;
+    background-color: #ffffff;
+  }
+  
+  .tabla-especificaciones__encabezado {
+    text-align: left;
+    background-color: #f4f4f4;
+    font-weight: 600;
+    padding: 0.85rem 1rem;
+    border-bottom: 2px solid #dcdcdc;
+  }
+  
+  .tabla-especificaciones__parametro,
+  .tabla-especificaciones__valor {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+    background-color: #ffffff;
+  }
+  
+  .tabla-especificaciones__parametro {
+    font-weight: 600;
+    width: 45%;
+  }
+  
+  .tabla-especificaciones__fila:nth-child(even)
+    .tabla-especificaciones__parametro,
+  .tabla-especificaciones__fila:nth-child(even)
+    .tabla-especificaciones__valor {
+    background-color: #fafafa;
+  }
+  
+  .tabla-especificaciones__fila:last-child .tabla-especificaciones__parametro,
+  .tabla-especificaciones__fila:last-child .tabla-especificaciones__valor {
+    border-bottom: none;
+  }
+  
+  /* Desktop: un poco más de aire y letra */
+  @media (min-width: 768px) {
+    .tabla-especificaciones {
+      font-size: 1rem;
+    }
+    .tabla-especificaciones__encabezado,
+    .tabla-especificaciones__parametro,
+    .tabla-especificaciones__valor {
+      padding: 1rem 1.25rem;
+    }
+  }
   
   
-  /* Responsive fino (si lo querés más compacto en móvil) */
-  @media (max-width: 420px) {
+/*   @media (max-width: 420px) {
     .evidencia .card {
       padding: 22px;
     }
@@ -118,7 +186,7 @@
       font-size: 18px;
     }
   }
-  
+   */
 
 @media(min-width: 768px){
     .evidencia{

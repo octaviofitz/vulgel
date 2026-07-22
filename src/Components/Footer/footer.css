@@ -14,7 +14,7 @@
 }
 
 .footer .logo{
-    width: 15vw;
+    width: 12vw;
     display: flex;
     margin: auto;
 }
@@ -62,7 +62,7 @@
 
 @media(min-width: 768px){
     .footer .logo{
-        width: 10vw;
+        width: 8vw;
     }
 
     .footer {
@@ -86,6 +86,14 @@
     }
 
     .footer .logo{
-        width: 6vw;
+        width: 3.5vw;
     }
+
+    .footer .texto{
+        margin-top: 00rem;
+    }
+
+    /* .footer .texto{
+        margin: 0;
+    } */
 }

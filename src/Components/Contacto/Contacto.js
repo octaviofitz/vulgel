@@ -150,14 +150,10 @@ function Contacto() {
           <div>
             <h4 className="titulo">Contacto</h4>
             <p className="texto">
-              Proteja la salud de sus animales y reduzca las pérdidas productivas
-              causadas por micotoxinas con VULGEL CR 40, el adsorbente natural de
-              alto rendimiento con eficacia comprobada y baja inclusión en la ración.
+            <strong>¿Querés proteger la salud de tus animales, mejorar la calidad del pellet y cuidar la vida útil de tu maquinaria?</strong>
             </p>
             <p className="texto">
-              Complete el formulario para cotizar VULGEL CR 40, consultar disponibilidad,
-              presentaciones y recibir asesoramiento técnico-comercial para su aplicación
-              según especie y tipo de producción.
+            Ponete en contacto con nuestro equipo técnico para recibir asesoramiento personalizado sobre <strong>VULGEL DUO</strong> o solicitar una cotización.
             </p>
           </div>
         </div>

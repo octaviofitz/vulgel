@@ -5,15 +5,14 @@ import './calidad.css';
 function Calidad() {
     return (
         <section className='calidad' id='calidad'>
-           <h3 className='titulo'>Calidad, Inocuidad y Uso</h3>
-           <p className='items'>Garantizamos la <strong>calidad</strong> y <strong>seguridad</strong> de nuestro producto, cumpliendo con los requisitos regulatorios más exigentes.</p>
+           <h3 className='titulo'>Calidad, Trazabilidad e Inocuidad Garantizada</h3>
+           <p className='items'>Todos los productos desarrollados por <strong>MPSA</strong> cuentan con rigurosos controles a lo largo de toda la cadena de producción, respaldados por investigación y desarrollo técnico continuo:</p>
            <ul>
-            <li className='items'>Habilitados por el SENASA (Servicio Nacional de Sanidad y Calidad Agroalimentaria)</li>
-            <li className='items'><strong>Certificación GMP+ B2:</strong> Somos productores de ingredientes alimenticios certificados por el estándar internacional <strong>GMP+ Feed Safety Management System</strong></li>
-            <li className='items'><strong>Inocuidad Certificada</strong>: Fabricado bajo las <strong>Buenas Prácticas de Manufactura y con el respaldo de la Certificación de Calidad ISO 9001:2015</strong>.</li>
-            <li className='items'><strong>Controles de Inocuidad:</strong> VULGEL CR 40 cumple estrictamente con los contenidos máximos de sustancias indeseables para piensos, incluyendo <strong>Arsénico (12 ppm máx.), Cadmio (2 ppm máx.), Mercurio (0,2 ppm máx.) y Plomo (30 ppm máx.)</strong>.</li>
-            <li className='items'><strong>Dosificación y Aplicación:</strong> Se recomienda la inclusión de <strong>1 a 3 Kg/Ton</strong> de alimento balanceado para todas las especies.</li>
-            <li className='items'><strong>Presentación:</strong> Disponible en Big Bags de 1.250 Kg. y en bolsas de 25 Kg.</li> 
+            <li className='items'><strong>Habilitación Oficial:</strong> Producto registrado y aprobado por el <strong>SENASA</strong> (Certificado N° 26-514/A).</li>
+            <li className='items'><strong>Respaldado por MPSA:</strong> Ofrecemos auditorías y controles de proveedores para brindar total tranquilidad y garantizar la trazabilidad del producto.</li>
+            <li className='items'><strong>Control de Inocuidad:</strong> Cumple de manera estricta con los límites máximos permitidos de sustancias indeseables en piensos (Arsénico, Cadmio, Mercurio y Plomo)</li>
+            <li className='items'><strong>Dosificación y Uso:</strong> Incluir de <strong>1 a 3 kg por tonelada</strong> de alimento balanceado para todas las especies.</li>
+
            </ul>
         </section>
     );

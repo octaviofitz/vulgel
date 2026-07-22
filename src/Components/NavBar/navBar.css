@@ -3,7 +3,8 @@
 }
 
 .navBar .logo {
-  height: 3.75vh !important;
+  height: 7vh !important;
+  max-width: 23VW !important;
 }
 
 .navBar .link {
@@ -57,7 +58,8 @@
   }
 
   .navBar .logo {
-    height: 4vh !important;
+    height: 7vh !important;
+    max-width: 20vw;
     padding-left: 2rem !important;
     margin-top: 0rem !important;
   }
@@ -71,7 +73,7 @@
   }
 
   .navBar .logo {
-    width: 15vw;
+    max-width: 28vw;
   }
 
   .navBar .link {

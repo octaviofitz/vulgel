@@ -6,13 +6,18 @@ function Nosotros() {
     return (
         <section className='nosotros' id='adsorbente'>
         <div className='containerTitulo'>
-            <h2 className='titulo'>Adsorbente natural de alto rendimiento</h2>
+            <h2 className='titulo'>El Adsorbente Natural con Poder Dual</h2>
             </div>
 
             <div className='containerTexto'>
-            <p className='texto'><strong>VULGEL CR 40</strong> es la solución de <strong>bentonita sódica natural</strong> de <strong>alta pureza</strong> especialmente indicada para neutralizar los problemas causados por micotoxinas y aflatoxicosis en bovinos, aves, cerdos y peces.</p>
-            <p className='texto'>Nuestro producto, con la montmorillonita como constituyente predominante, exhibe una <strong>mejor capacidad de adsorción</strong> comparado con otros tipos de esmécticas. Es altamente efectivo contra las aflatoxinas y también contra las otras micotoxinas como la T2, la Zearalenona y la DON (vomitoxina). Esto lo convierte en un aliado esencial en la prevención de riesgos y daños para la salud animal.</p>
-            <p className='texto'><strong>Proteja la Salud Animal y la Rentabilidad.</strong></p>
+            <p className='texto'><strong>VULGEL DUO</strong> es la solución definitiva basada en Bentonita Sódica Natural, especialmente indicada para neutralizar los problemas causados por micotoxinas e infecciones como la aflatoxicosis en bovinos, aves, cerdos, equinos y peces.</p>
+            <p className='texto'>Tal como su nombre lo indica, <strong>VULGEL DUO</strong> posee un potencial dual único en el mercado:</p>
+            <ul>
+                <li className='texto'>Adsorción molecular de micotoxinas y contaminantes.</li>
+                <li className='texto'>Aglutinación eficiente y cuidado industrial del peletizado.</li>
+            </ul>
+            <p className='texto'>Gracias a su estructura de aluminosilicato en capas (2:1), su elevada superficie específica y su alta afinidad química, <strong>VULGEL DUO</strong> atrapa y retiene de forma efectiva micotoxinas (Aflatoxinas, T2, Zearalenona, DON / vomitoxina) y metales pesados (como plomo o cobre).</p>
+            <p className='texto'>Además, su excelente dispersabilidad y poder de cohesión confieren al pellet una <strong>máxima resistencia mecánica y estabilidad dimensional</strong>. Al ser una bentonita de alta calidad y bajo contenido de impurezas, actúa como un excelente aglutinante <strong>sin dañar la peletizadora</strong>: su bajo nivel de residuos abrasivos <strong>evita el desgaste prematuro o la rotura de los dados y rodillos de la maquinaria</strong>, protegiendo tu inversión industrial.</p>
             </div>
         </section>
     );
