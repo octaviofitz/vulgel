@@ -26,7 +26,7 @@
   right: 0;
   height: 3px;
   width: 70%;
-  background: #636e50;
+  background: #aecee0;
   bottom: -1.5px;              /* 🔑 bajá o subí la línea (ej: -6, -10) */
   transform: scaleX(0);
   transform-origin: left;
@@ -40,12 +40,12 @@
 
 .navbar-toggler {
   font-size: 0.9rem;
-  color: #636e50;
+  color: #aecee0;
   border: transparent;
 }
 
 .navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
-  color: #636e50;
+  color: #aecee0;
 }
 
 .w-100 {
@@ -78,7 +78,7 @@
 
   .navBar .link {
     padding: 3px 10px;
-    border-right: 1px solid #636e50;
+    border-right: 1px solid #aecee0;
   }
 
   .navBar .link:last-child {

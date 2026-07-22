@@ -6,10 +6,11 @@
 }
 
 .nosotros .titulo{
-    color: #636e50;
+    color: #aecee0;
     font-family: 'MontrealBold';
     margin-bottom: 1.5rem;
     font-size: 3rem;
+    font-weight: 900;
 }
 
 .nosotros .texto{

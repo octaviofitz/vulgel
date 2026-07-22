@@ -27,9 +27,10 @@
 
 .footer a{
     text-decoration: none;
-    color: #636e50;
+    color: #aecee0;
     cursor: pointer;
     font-size: 1.08rem;
+    font-weight: 900;
 }
 
 .footer .containerTexto .link{
@@ -57,7 +58,7 @@
 }
 
 .footer .bold:hover{
-    color: #636e50;
+    color: #aecee0;
 }
 
 @media(min-width: 768px){
