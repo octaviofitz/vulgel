@@ -5,7 +5,7 @@ import './evidencia.css';
 
 function Evidencia() {
 
-    const especificaciones = [
+ /*    const especificaciones = [
         { parametro: "Materia Prima", valor: "Bentonita Sódica Natural" },
         { parametro: "Forma Física", valor: "Polvo seco y fino" },
         { parametro: "Color", valor: "Beige / Marrón claro" },
@@ -15,7 +15,7 @@ function Evidencia() {
         { parametro: "Granulometría (ASTM #200 - 0,075 mm)", valor: "25,0 % máximo" },
         { parametro: "Dosis Recomendada", valor: "1 – 3 kg / tonelada de alimento" },
         { parametro: "Registro SENASA", valor: "N° 26-514/A" },
-      ];
+      ]; */
 
 
     return (
@@ -85,7 +85,7 @@ function Evidencia() {
                     </li>
                 </ul>
                 <div>
-  <img className='imgTabla' src={Tabla} />
+  <img className='imgTabla' src={Tabla} alt='tabla' />
 </div>
             </div>
         </section>
