@@ -13,6 +13,12 @@
 
 .calidad .listado{
     margin-top: 1rem;
+    font-size: 1.15rem;
+}
+
+.calidad .items{
+    font-size: 1.15vw;
+
 }
 
 @media(min-width: 768px){
@@ -21,6 +27,6 @@
     }
 
     .calidad .items{
-        font-size: 1.15rem;
+        font-size: 1.15vw;
     }
 }

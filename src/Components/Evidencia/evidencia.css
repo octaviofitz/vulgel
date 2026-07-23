@@ -81,11 +81,12 @@
   
   .evidencia .subtitulo span {
     font-weight: 750;
+    font-size: 1.15rem;
   }
   
   /* Texto principal */
   .evidencia .cards .card .texto {
-    font-size: 17px;
+    font-size: 1.15rem;
     line-height: 1.55;
     color:black;
     margin: 0 0 12px 0;
@@ -101,6 +102,10 @@
   .evidencia .cards .card .texto strong {
     color: black;
     font-weight: 650;
+  }
+
+  .evidencia .items{
+    font-size: 1.15rem;
   }
 
 
@@ -160,6 +165,16 @@
     border-bottom: none;
   }
   
+
+  .imgTabla{
+    display: flex;
+    margin: 1.5rem auto 0;
+    width: 85vw;
+  }
+
+  .evidencia .subtitulo{
+    font-size: 1.5rem;
+  }
   /* Desktop: un poco más de aire y letra */
   @media (min-width: 768px) {
     .tabla-especificaciones {
@@ -172,25 +187,17 @@
     }
   }
   
-  
-/*   @media (max-width: 420px) {
-    .evidencia .card {
-      padding: 22px;
-    }
-  
-    .evidencia .porcentaje {
-      font-size: 48px;
-    }
-  
-    .evidencia .subtitulo {
-      font-size: 18px;
-    }
-  }
-   */
+
 
 @media(min-width: 768px){
     .evidencia{
         padding: 5vh 10vw;
+    }
+
+    .imgTabla{
+      display: flex;
+      margin: 1.5rem auto 0;
+      width: 60vw;
     }
 }
 
@@ -211,6 +218,13 @@
     .evidencia .texto{
         text-align: center;
     }
+
+    .imgTabla{
+      width: 45vw;
+      margin-top: 2.5rem;
+    }
+
+
 
 
 }
@@ -234,7 +248,7 @@
 
     .evidencia .texto,
     .evidencia .items{
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .evidencia .cards{
@@ -246,6 +260,10 @@
 
     .evidencia .cards .card{
         width: 30vw;
+    }
+
+    .imgTabla{
+      width: 35vw;
     }
 }
 

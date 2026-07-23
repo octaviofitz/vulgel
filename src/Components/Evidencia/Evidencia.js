@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Tabla from '../../IMG/Index/ficha.jpeg';
 import './evidencia.css';
 
 function Evidencia() {
@@ -23,7 +24,7 @@ function Evidencia() {
                 <h2 className='titulo'>Evidencia de Eficacia y Especificaciones Técnicas</h2>
                 
                 <div className='containerTexto'>
-                <p className='texto'><strong>Mecanismo de Acción Dual y Beneficios Industriales</strong></p>
+                <p className='texto'><strong className='subtitulo'>Mecanismo de Acción Dual y Beneficios Industriales</strong></p>
                 <ul>
                     <li className='items'><strong>Estructura Adsorbente y Capacidad de Intercambio Catiónico (CIC):</strong> Su estructura trilaminar y su carga negativa le otorgan sitios de unión activos para capturar micotoxinas y cationes de metales pesados mediante enlaces estables, logrando que sean eliminados de manera segura a través de las excretas.</li>
                     <li className='items'><strong>Cohesión para Pelletizado y Protección de Equipos:</strong> Aumenta la durabilidad del pellet, reduce la presencia de finos y preserva la integridad del alimento. Asimismo, al carecer de residuos abrasivos significativos, <strong>preserva los componentes críticos del proceso de peletización (dados y rodillos)</strong>, extendiendo su vida útil.</li>
@@ -59,8 +60,8 @@ function Evidencia() {
 
                     </div> */}
 
-<div className="contenedor-tabla">
-  <table className="tabla-especificaciones">
+{/*<div className="contenedor-tabla">
+   <table className="tabla-especificaciones">
     <thead>
       <tr>
         <th className="tabla-especificaciones__encabezado">Parámetro</th>
@@ -75,14 +76,17 @@ function Evidencia() {
         </tr>
       ))}
     </tbody>
-  </table>
-</div>
+  </table> */}
+
 
 
 
 
                     </li>
                 </ul>
+                <div>
+  <img className='imgTabla' src={Tabla} />
+</div>
             </div>
         </section>
     );
