@@ -16,6 +16,10 @@
     font-size: 1.15rem;
 }
 
+.calidad .items{
+    font-size: 1.15rem;
+}
+
 
 @media(min-width: 768px){
     .calidad{
