@@ -204,7 +204,7 @@
 @media(min-width: 1024px){
     .evidencia{
         gap: 4vw; /* espacio entre título y texto */
-        align-items: flex-start; /* o center si querés centrar verticalmente */
+        align-items: flex-start; /* o centr si querés centrar verticalmente */
         padding: 5vw 7vw;
     }
 
