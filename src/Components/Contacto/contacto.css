@@ -76,7 +76,14 @@
     }
 
     .contacto .texto{
-        font-size: 1.15vw;
+        font-size: 1.15rem;
         margin-right: 1rem;
     }
+}
+
+@media(min-width: 1440px){
+    .contacto .texto{
+        font-size: 1.5rem;
+    }
+
 }

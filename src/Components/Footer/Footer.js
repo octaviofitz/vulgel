@@ -20,9 +20,9 @@ function Footer() {
                 <Nav.Link className="link" href="/#contacto">Contacto</Nav.Link>
             </div>
 
-            <div className='galide'>
+           {/*  <div className='galide'>
             <p className='texto'>Desarrollado por <a href='https://www.galide.com.ar' target='__blank' className='bold'>Galidé</a></p>
-            </div>
+            </div> */}
            
         </footer>
     );
