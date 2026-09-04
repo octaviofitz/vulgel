@@ -113,10 +113,10 @@ function Contacto() {
 
     emailjs
       .sendForm(
-        'service_avyk5ff',
-        'template_ayu86b6',
+        'service_jskz02s',
+        'template_naf8zcv',
         e.target,
-        'kGJMjsQGEXz5lmSJ2'
+        'UYGamSx02-dxkooxG'
       )
       .then((response) => {
         console.log('Estado:', response.status);
