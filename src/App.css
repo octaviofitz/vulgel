@@ -12,25 +12,6 @@
   --sombra-hover: 0 14px 34px rgba(23, 23, 23, 0.12);
 }
 
-/* Patrón del isologo, muy tenue, para algunos fondos (como en la carpeta) */
-.evidencia,
-.marcas{
-  position: relative;
-  isolation: isolate;
-}
-
-.evidencia::before,
-.marcas::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-image: url('./IMG/Fondos/patron.png');
-  background-size: 180px 180px;
-  opacity: 0.07;
-  pointer-events: none;
-}
-
 *{
   margin: 0;
   padding: 0;
@@ -83,8 +64,7 @@ h1, h2, h3, h4, h5, p, li{
 }
 
 .centrado::after{
-  margin-left: auto;
-  margin-right: auto;
+  display: none;
 }
 
 @media (min-width: 1024px){
@@ -96,6 +76,12 @@ h1, h2, h3, h4, h5, p, li{
 strong{
   font-family: 'MontrealBold';
   font-weight: normal;
+}
+
+/* El nombre del producto siempre en una sola línea */
+.nombreProducto{
+  white-space: nowrap;
+  font-family: inherit;
 }
 
 .items{
@@ -178,10 +164,6 @@ ul{
   transition: transform .8s var(--ease-expo) .45s;
 }
 
-.animado .efectoTitulo.centrado::after{
-  transform-origin: center;
-}
-
 .animado .efectoTitulo.visible::after{
   transform: scaleX(1);
 }
@@ -208,31 +190,6 @@ ul{
 
 .animado .efectoFundido.visible{
   opacity: 1;
-}
-
-/* Patrón de fondo y marca de agua: se desplazan apenas con el scroll */
-.evidencia{ view-timeline-name: --evidencia; }
-.marcas{ view-timeline-name: --marcas; }
-
-@supports (animation-timeline: view()) {
-  @media (prefers-reduced-motion: no-preference) {
-    .evidencia::before,
-    .marcas::before{
-      animation-name: patronDeriva;
-      animation-timing-function: linear;
-      animation-fill-mode: both;
-      animation-duration: auto;
-      animation-range: cover 0% cover 100%;
-    }
-
-    .evidencia::before{ animation-timeline: --evidencia; }
-    .marcas::before{ animation-timeline: --marcas; }
-  }
-}
-
-@keyframes patronDeriva{
-  from{ background-position: 0 0; }
-  to{ background-position: 0 -90px; }
 }
 
 /* Respuesta al clic en botones */

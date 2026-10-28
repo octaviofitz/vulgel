@@ -28,7 +28,7 @@ function Evidencia() {
                 <ul className='beneficios'>
                     <li className='items'><strong>Estructura Adsorbente y Capacidad de Intercambio Catiónico (CIC):</strong> Su estructura trilaminar y su carga negativa le otorgan sitios de unión activos para capturar micotoxinas y cationes de metales pesados mediante enlaces estables, logrando que sean eliminados de manera segura a través de las excretas.</li>
                     <li className='items'><strong>Cohesión para Pelletizado y Protección de Equipos:</strong> Aumenta la durabilidad del pellet, reduce la presencia de finos y preserva la integridad del alimento. Asimismo, al carecer de residuos abrasivos significativos, <strong>preserva los componentes críticos del proceso de peletización (dados y rodillos)</strong>, extendiendo su vida útil.</li>
-                    <li className='items fichaItem'><strong>Ficha Físico-Química de VULGEL DUO</strong>
+                    <li className='items fichaItem'><strong>Ficha Físico-Química de <span className='nombreProducto'>VULGEL DUO</span></strong>
                        
                 {/*     <div className="cards">
 

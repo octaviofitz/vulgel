@@ -113,14 +113,16 @@
   to { opacity: 1; transform: none; }
 }
 
+/* El nombre va con la tipografía del logo */
 .header .titulo {
   margin: 0;
   color: var(--blanco);
-  font-family: 'MontrealBold';
-  font-weight: normal;
-  font-size: 52px;
-  letter-spacing: -0.01em;
+  font-family: 'Saira Condensed', 'MontrealBold', sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  letter-spacing: 0.01em;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .header .subitutlo {
@@ -201,7 +203,7 @@
 
 @media (min-width: 768px) {
   .header .titulo {
-    font-size: 72px;
+    font-size: 92px;
   }
 
   .header .subitutlo {
@@ -211,7 +213,7 @@
 
 @media (min-width: 1440px) {
   .header .titulo {
-    font-size: 96px;
+    font-size: 124px;
   }
 
   .header .subitutlo {
@@ -232,5 +234,6 @@
 
 .header .titulo span {
   font-family: inherit;
+  font-weight: inherit;
   color: inherit;
 }

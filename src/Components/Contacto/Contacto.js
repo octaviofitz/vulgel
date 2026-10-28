@@ -165,7 +165,7 @@ function Contacto() {
           <strong>¿Querés proteger la salud de tus animales, mejorar la calidad del pellet y cuidar la vida útil de tu maquinaria?</strong>
           </p>
           <p className="texto">
-          Ponete en contacto con nuestro equipo técnico para recibir asesoramiento personalizado sobre <strong>VULGEL DUO</strong> o solicitar una cotización.
+          Ponete en contacto con nuestro equipo técnico para recibir asesoramiento personalizado sobre <strong className='nombreProducto'>VULGEL DUO</strong> o solicitar una cotización.
           </p>
         </div>
       </div>
