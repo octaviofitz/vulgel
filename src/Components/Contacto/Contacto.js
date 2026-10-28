@@ -1,18 +1,27 @@
 import React, { useState } from 'react';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import { Button } from '@mui/material';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import './contacto.css';
 
-const theme = createTheme({
-  palette: {
-    primary: { main: '#171717' },
-  },
-});
+// Campo del formulario con su etiqueta y su mensaje de error
+function Campo({ id, etiqueta, error, leyenda, multilinea, ...props }) {
+  const Control = multilinea ? 'textarea' : 'input';
+  return (
+    <div className={`campo${error ? ' conError' : ''}`}>
+      <label htmlFor={id} className="oculto">{etiqueta}</label>
+      <Control
+        id={id}
+        placeholder={etiqueta}
+        aria-invalid={error}
+        aria-describedby={`${id}-error`}
+        rows={multilinea ? 4 : undefined}
+        {...props}
+      />
+      <p id={`${id}-error`} className="leyenda">{leyenda}</p>
+    </div>
+  );
+}
 
 function Contacto() {
   const [name, setName] = useState('');
@@ -148,115 +157,74 @@ function Contacto() {
   };
 
   return (
-    <ThemeProvider theme={theme}>
-      <section className="contacto" id="contacto">
-        <div className="containerTexto">
-          <div>
-            <h2 className="titulo tituloSeccion">Contacto</h2>
-            <p className="texto">
-            <strong>¿Querés proteger la salud de tus animales, mejorar la calidad del pellet y cuidar la vida útil de tu maquinaria?</strong>
-            </p>
-            <p className="texto">
-            Ponete en contacto con nuestro equipo técnico para recibir asesoramiento personalizado sobre <strong>VULGEL DUO</strong> o solicitar una cotización.
-            </p>
-          </div>
+    <section className="contacto" id="contacto">
+      <div className="containerTexto">
+        <div>
+          <h2 className="titulo tituloSeccion">Contacto</h2>
+          <p className="texto">
+          <strong>¿Querés proteger la salud de tus animales, mejorar la calidad del pellet y cuidar la vida útil de tu maquinaria?</strong>
+          </p>
+          <p className="texto">
+          Ponete en contacto con nuestro equipo técnico para recibir asesoramiento personalizado sobre <strong>VULGEL DUO</strong> o solicitar una cotización.
+          </p>
         </div>
+      </div>
 
-        <div className="containerBox">
-          <Box
-            component="form"
-            sx={{
-              '& .MuiTextField-root': { m: 1 },
-            }}
-            noValidate
-            autoComplete="off"
-            id="formulario"
-            onSubmit={sendEmail}
-            className="box"
-          >
-            <div>
-              <TextField
-                id="outlined-basic"
-                name="nombre"
-                label="Nombre"
-                fullWidth
-                variant="outlined"
-                sx={{
-                  backgroundColor: '#fff',
-                  borderRadius: '6px',
-                }}
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                onBlur={validateName}
-                error={errorName}
-                helperText={leyendaName}
-              />
+      <div className="containerBox">
+        <form noValidate autoComplete="off" id="formulario" onSubmit={sendEmail} className="box">
+          <Campo
+            id="nombre"
+            name="nombre"
+            etiqueta="Nombre"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            onBlur={validateName}
+            error={errorName}
+            leyenda={leyendaName}
+          />
 
-              <TextField
-                id="outlined-required"
-                label="Correo electrónico"
-                name="mail"
-                variant="outlined"
-                fullWidth
-                type="email"
-                sx={{
-                  backgroundColor: '#fff',
-                  borderRadius: '6px',
-                }}
-                value={mail}
-                onChange={(e) => setMail(e.target.value)}
-                onBlur={validateMail}
-                error={errorMail}
-                helperText={leyendaMail}
-                
-              />
+          <Campo
+            id="mail"
+            name="mail"
+            type="email"
+            etiqueta="Correo electrónico"
+            value={mail}
+            onChange={(e) => setMail(e.target.value)}
+            onBlur={validateMail}
+            error={errorMail}
+            leyenda={leyendaMail}
+          />
 
-              <TextField
-                id="outlined-tel"
-                label="Teléfono"
-                name="tel"
-                type="tel"
-                fullWidth
-                variant="outlined"
-                sx={{
-                  backgroundColor: '#fff',
-                  borderRadius: '6px',
-                }}
-                value={telefono}
-                onChange={(e) => setTelefono(e.target.value)}
-                onBlur={validateTel}
-                error={errorTel}
-                helperText={leyendaTel}
-                
-              />
+          <Campo
+            id="tel"
+            name="tel"
+            type="tel"
+            etiqueta="Teléfono"
+            value={telefono}
+            onChange={(e) => setTelefono(e.target.value)}
+            onBlur={validateTel}
+            error={errorTel}
+            leyenda={leyendaTel}
+          />
 
-              <TextField
-                id="outlined-multiline-static"
-                label="Mensaje"
-                name="msg"
-                multiline
-                fullWidth
-                rows={4}
-                sx={{
-                  backgroundColor: '#fff',
-                  borderRadius: '6px',
-                }}
-                value={mensaje}
-                onChange={(e) => setMensaje(e.target.value)}
-                onBlur={validateMsg}
-                error={errorMsg}
-                helperText={leyendaMsg}
-                
-              />
+          <Campo
+            id="msg"
+            name="msg"
+            multilinea
+            etiqueta="Mensaje"
+            value={mensaje}
+            onChange={(e) => setMensaje(e.target.value)}
+            onBlur={validateMsg}
+            error={errorMsg}
+            leyenda={leyendaMsg}
+          />
 
-              <Button variant="contained" size="large" className="boton" type="submit">
-                Enviar mensaje
-              </Button>
-            </div>
-          </Box>
-        </div>
-      </section>
-    </ThemeProvider>
+          <button className="boton" type="submit">
+            Enviar mensaje
+          </button>
+        </form>
+      </div>
+    </section>
   );
 }
 

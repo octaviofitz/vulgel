@@ -2,6 +2,13 @@
   background-color: var(--blanco);
   border-bottom: 1px solid #ece6df;
   padding: 10px 0;
+  transition: box-shadow .3s ease, border-color .3s ease;
+}
+
+/* Sombra suave cuando la página ya bajó */
+.navBar.conSombra {
+  border-bottom-color: transparent;
+  box-shadow: 0 6px 24px rgba(23, 23, 23, 0.08);
 }
 
 .navBar .logo {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Tabla from '../../IMG/Index/ficha.jpeg';
+import Tabla from '../../IMG/Index/ficha.webp';
 import './evidencia.css';
 
 function Evidencia() {

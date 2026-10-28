@@ -17,6 +17,7 @@ const marcas = [
     {
         nombre: 'Aglupel Eco',
         logo: LogoAglupel,
+        logoAncho: true,
         rubro: 'Peletizado',
         descripcion: 'Aglutinante natural de alta cohesión, para un pellet más firme y resistente.',
         url: 'https://peletizado.com.ar/',
@@ -24,6 +25,7 @@ const marcas = [
     {
         nombre: 'Rubicat',
         logo: LogoRubicat,
+        logoAncho: true,
         rubro: 'Mascotas',
         descripcion: 'Arena sanitaria para gatos elaborada a base de bentonita.',
         url: 'https://rubicat.com.ar/',
@@ -37,10 +39,10 @@ function Marcas() {
             <p className='bajada'>Productos a base de bentonita elaborados por <strong>MPSA</strong> para cada industria.</p>
 
             <div className='grilla'>
-                {marcas.map(({ nombre, logo, rubro, descripcion, url }) => (
+                {marcas.map(({ nombre, logo, logoAncho, rubro, descripcion, url }) => (
                     <a key={nombre} href={url} target='_blank' rel='noopener noreferrer' className='marca'>
                         <span className='logoMarca'>
-                            <img src={logo} alt={nombre} loading='lazy' />
+                            <img src={logo} alt={nombre} loading='lazy' className={logoAncho ? 'ancho' : undefined} />
                         </span>
                         <span className='rubro'>{rubro}</span>
                         <span className='descripcion'>{descripcion}</span>

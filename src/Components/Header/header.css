@@ -3,7 +3,7 @@
   width: 100%;
   height: 78vh;
   min-height: 520px;
-  overflow: hidden;
+  overflow: clip;
   isolation: isolate;
   display: flex;
   flex-direction: column;
@@ -22,12 +22,38 @@
   object-fit: cover;
   z-index: 0;
   pointer-events: none;
-  animation: acercamiento 20s ease-out forwards;
+  animation: acercamiento 2.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes acercamiento {
-  from { transform: scale(1.08); }
+  from { transform: scale(1.1); }
   to { transform: scale(1); }
+}
+
+.header .copia {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* El título sube desde atrás de una máscara */
+.header .mascara {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+}
+
+.header .linea {
+  display: block;
+  animation: lineaArriba 1s cubic-bezier(0.16, 1, 0.3, 1) .15s both;
+}
+
+@keyframes lineaArriba {
+  from { transform: translateY(105%); }
+  to { transform: none; }
 }
 
 /* Capa oscura pareja para que el texto se lea */
@@ -35,18 +61,51 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(23, 23, 23, 0.58);
+  background: var(--tinta);
+  opacity: 0.58;
   z-index: 1;
   pointer-events: none;
 }
 
-.header .titulo,
+/* Al bajar, la portada se oscurece y el texto se aleja hacia arriba */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .header::after {
+      animation-name: portadaOscura;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-duration: auto;
+      animation-timeline: scroll(root);
+      animation-range: 0 75vh;
+    }
+
+    .header .copia {
+      animation-name: portadaSube;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-duration: auto;
+      animation-timeline: scroll(root);
+      animation-range: 0 60vh;
+    }
+  }
+}
+
+@keyframes portadaOscura {
+  from { opacity: 0.58; }
+  to { opacity: 0.85; }
+}
+
+@keyframes portadaSube {
+  from { transform: none; opacity: 1; }
+  to { transform: translateY(-14%); opacity: 0; }
+}
+
 .header .subitutlo,
 .header .especies,
 .header .nav-link {
   position: relative;
   z-index: 2;
-  animation: subir .9s ease-out both;
+  animation: subir .6s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 @keyframes subir {
@@ -72,7 +131,7 @@
   font-weight: normal;
   font-size: 21px;
   line-height: 1.35;
-  animation-delay: .12s;
+  animation-delay: .42s;
 }
 
 .header .especies {
@@ -80,14 +139,14 @@
   color: var(--celeste);
   font-size: 15px;
   letter-spacing: 0.08em;
-  animation-delay: .22s;
+  animation-delay: .52s;
 }
 
 .header .nav-link {
   padding: 0;
   margin-top: 2.25rem;
   text-decoration: none;
-  animation-delay: .32s;
+  animation-delay: .62s;
 }
 
 .header .btn-secondary {
@@ -162,10 +221,16 @@
 
 @media (prefers-reduced-motion: reduce) {
   .banner,
+  .header .linea,
   .header .titulo,
   .header .subitutlo,
   .header .especies,
   .header .nav-link {
     animation: none;
   }
+}
+
+.header .titulo span {
+  font-family: inherit;
+  color: inherit;
 }

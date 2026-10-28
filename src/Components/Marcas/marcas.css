@@ -55,13 +55,17 @@
     transition: transform .3s ease;
 }
 
+.marcas .logoMarca img.ancho{
+    max-width: 52%;
+}
+
 .marcas .marca:hover .logoMarca img{
     transform: scale(1.05);
 }
 
 .marcas .rubro{
     font-family: 'MontrealBold';
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--gris-texto);
@@ -79,11 +83,12 @@
     margin-top: 0.5rem;
     font-family: 'MontrealBold';
     font-size: 0.95rem;
-    color: var(--naranja);
+    color: var(--naranja-texto);
 }
 
 .marcas .flecha{
     display: inline-block;
+    color: inherit;
     transition: transform .3s ease;
 }
 

@@ -1,6 +1,7 @@
 .contacto{
     position: relative;
     isolation: isolate;
+    view-timeline-name: --contacto;
     overflow: hidden;
     background-color: var(--celeste);
     padding: 4.5rem 1.5rem;
@@ -21,9 +22,26 @@
     pointer-events: none;
 }
 
-.contacto .MuiTextField-root .MuiOutlinedInput-root{
-    box-shadow: var(--sombra);
+/* El isologo se mueve lento con el scroll */
+@supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+        .contacto::before{
+            animation-name: isologoDeriva;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-duration: auto;
+            animation-timeline: --contacto;
+            animation-range: cover 0% cover 100%;
+        }
+    }
 }
+
+@keyframes isologoDeriva{
+    from{ transform: translateY(40px) rotate(-4deg); }
+    to{ transform: translateY(-40px) rotate(2deg); }
+}
+
+
 
 .contacto .titulo{
     margin-bottom: 1.5rem;
@@ -36,21 +54,68 @@
 }
 
 .contacto .box{
-    margin: 1.5rem -8px 0;
+    margin-top: 1.5rem;
 }
 
-.contacto .MuiOutlinedInput-notchedOutline{
-    border-color: transparent;
+/* Campos del formulario */
+.contacto .campo{
+    margin-bottom: 0.9rem;
+}
+
+.contacto .campo input,
+.contacto .campo textarea{
+    display: block;
+    width: 100%;
+    padding: 0.95rem 1rem;
+    font-family: 'MontrealMedium';
+    font-size: 1rem;
+    color: var(--tinta);
+    background: var(--blanco);
+    border: 2px solid transparent;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    outline: none;
+    resize: vertical;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.contacto .campo input::placeholder,
+.contacto .campo textarea::placeholder{
+    color: #7a7570;
+}
+
+.contacto .campo input:focus,
+.contacto .campo textarea:focus{
+    border-color: var(--tinta);
+}
+
+.contacto .campo.conError input,
+.contacto .campo.conError textarea{
+    border-color: #b3261e;
+}
+
+.contacto .leyenda{
+    min-height: 0;
+    margin: 0.3rem 0 0 0.25rem;
+    font-size: 0.85rem;
+    color: #8c1d18;
+}
+
+.contacto .leyenda:empty{
+    display: none;
 }
 
 .contacto .boton{
     display: flex;
-    margin: 1.25rem 8px 0 auto;
+    border: 0;
+    cursor: pointer;
+    margin: 1.25rem 0 0 auto;
     background-color: var(--naranja);
     color: var(--blanco);
     font-family: 'MontrealBold';
     font-size: 0.95rem;
     letter-spacing: 0.08em;
+    text-transform: uppercase;
     border-radius: var(--radio);
     box-shadow: 0 8px 22px rgba(255, 60, 0, 0.25);
     padding: 0.85rem 2.25rem;
