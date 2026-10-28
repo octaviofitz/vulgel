@@ -369,3 +369,190 @@
         width: 100%;
     }
 }
+
+
+/* Ficha físico-química en HTML */
+.evidencia .ficha{
+    padding: 0;
+    overflow: hidden;
+    max-width: 680px;
+}
+
+.tablaFicha table{
+    width: 100%;
+    border-collapse: collapse;
+    font-variant-numeric: tabular-nums;
+}
+
+.tablaFicha tr + tr td,
+.tablaFicha tr + tr th{
+    border-top: 1px solid #ece6df;
+}
+
+.tablaFicha .celdaIcono{
+    width: 76px;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tablaFicha tr + tr .celdaIcono{
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.tablaFicha .celdaIcono svg{
+    display: block;
+    width: 34px;
+    height: 34px;
+    margin: 0 auto;
+}
+
+.tablaFicha .celdaIcono.naranja{ background: var(--naranja); color: var(--blanco); }
+.tablaFicha .celdaIcono.celeste{ background: var(--celeste); color: var(--tinta); }
+.tablaFicha .celdaIcono.tinta{ background: var(--tinta); color: var(--blanco); }
+
+.tablaFicha .parametro,
+.tablaFicha .valor{
+    padding: 1.15rem 1.4rem;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.tablaFicha .parametro{
+    font-family: 'MontrealMedium';
+    font-weight: normal;
+    font-size: 1.1rem;
+    color: var(--tinta);
+}
+
+.tablaFicha .detalle,
+.tablaFicha .nota{
+    display: block;
+    margin-top: 0.15rem;
+    font-size: 0.9rem;
+    color: var(--gris-texto);
+}
+
+.tablaFicha .valor{
+    width: 34%;
+    border-left: 1px solid #ece6df;
+}
+
+.tablaFicha .cifra{
+    display: block;
+    font-family: 'MontrealBold';
+    font-size: 1.3rem;
+    color: var(--tinta);
+    white-space: nowrap;
+}
+
+/* Fila resaltada al pasar el mouse */
+.tablaFicha tbody tr{
+    transition: background-color .2s ease;
+}
+
+.tablaFicha tbody tr:hover .parametro,
+.tablaFicha tbody tr:hover .valor{
+    background: #faf7f3;
+}
+
+@media (max-width: 600px){
+    .tablaFicha .celdaIcono{
+        width: 56px;
+    }
+
+    .tablaFicha .celdaIcono svg{
+        width: 28px;
+        height: 28px;
+    }
+
+    .tablaFicha .parametro,
+    .tablaFicha .valor{
+        padding: 0.95rem 0.9rem;
+    }
+
+    .tablaFicha .parametro{
+        font-size: 1rem;
+    }
+
+    .tablaFicha .cifra{
+        font-size: 1.1rem;
+    }
+
+    .tablaFicha .detalle,
+    .tablaFicha .nota{
+        font-size: 0.82rem;
+    }
+}
+
+/* Cada columna con su título, al mismo nivel */
+.evidencia .tituloColumna{
+    font-family: 'MontrealBold';
+    font-weight: normal;
+    font-size: 1.45rem;
+    line-height: 1.25;
+    color: var(--tinta);
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+.evidencia .tituloColumna span{
+    font-family: inherit;
+}
+
+.evidencia .columnaFicha{
+    margin-top: 3rem;
+}
+
+.evidencia .beneficios .items > strong:first-child{
+    font-size: 1.25rem;
+}
+
+/* Desktop: dos columnas simétricas, del mismo alto */
+@media (min-width: 1100px){
+    .evidencia .containerTexto{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 3rem;
+        align-items: stretch;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .evidencia .columnaBeneficios,
+    .evidencia .columnaFicha{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .evidencia .tituloColumna{
+        text-align: left;
+        font-size: 1.6rem;
+        min-height: 2.5em;
+        margin-bottom: 1.5rem;
+    }
+
+    .evidencia .beneficios{
+        flex: 1;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .evidencia .beneficios .items{
+        flex: 1;
+    }
+
+    .evidencia .ficha{
+        flex: 1;
+        max-width: none;
+        margin: 0;
+    }
+
+    .evidencia .tablaFicha,
+    .evidencia .tablaFicha table{
+        height: 100%;
+    }
+}
