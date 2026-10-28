@@ -1,67 +1,126 @@
 .calidad{
-    background-color: white;
-    padding: 0rem 2rem 3rem;
+    background-color: var(--blanco);
+    padding: 4.5rem 1.5rem;
 }
 
-.calidad .titulo{
-    font-family: 'MontrealBold';
-    margin-bottom: 1.5rem;
-    font-size: 3rem;
-    color: #aecee0;
-    font-weight: 900;
+.calidad .intro{
+    max-width: 760px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
-.calidad .listado{
-    margin-top: 1rem;
-    font-size: 1.15rem;
+/* Certificaciones: logo centrado en su bloque */
+.calidad .certificaciones{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-.calidad .items{
-    font-size: 1.15rem;
-}
-
-.calidad .container{
+.calidad .certificacion{
     display: flex;
-    margin: 3rem auto 0rem;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2.25rem 1.75rem;
+    background: var(--crema);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    transition: transform .3s ease, box-shadow .3s ease;
 }
 
-.calidad .container .img{
-    width: 70vw;
-    margin-bottom: 1rem;
-} 
+.calidad .certificacion:hover{
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-hover);
+}
+
+.calidad .sello{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 110px;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.calidad .sello img{
+    max-height: 100%;
+    max-width: 240px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+.calidad .certificacion h3{
+    font-family: 'MontrealBold';
+    font-size: 1.3rem;
+    margin-bottom: 0.35rem;
+}
+
+.calidad .certificacion .dato{
+    color: var(--naranja);
+    font-family: 'MontrealBold';
+    font-size: 0.95rem;
+    margin-bottom: 0.9rem;
+}
+
+.calidad .certificacion p{
+    max-width: 42ch;
+    line-height: 1.55;
+}
+
+/* Garantías */
+.calidad .garantias{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 3rem auto 0;
+}
+
+.calidad .garantia{
+    padding-top: 1.25rem;
+    border-top: 3px solid var(--naranja);
+}
+
+.calidad .garantia h3{
+    font-family: 'MontrealBold';
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+}
+
+.calidad .garantia p{
+    line-height: 1.55;
+}
 
 @media(min-width: 768px){
     .calidad{
-        padding: 2vh 10vw 5vh;
+        padding: 6rem 10vw;
     }
 
-    .calidad .items{
-        font-size: 1.15rem;
+    .calidad .certificaciones{
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
     }
 
-    .calidad .container{
-        align-items: center;
+    .calidad .garantias{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
     }
+}
 
-    .calidad .container .img{
-        width: 35vw;
-        margin-bottom: 1rem;
-    } 
+@media(min-width: 1024px){
+    .calidad{
+        padding: 7rem 10vw;
+    }
 }
 
 @media(min-width: 1440px){
-    .calidad .items{
-        font-size: 1.5rem;
-    }
-
-    .calidad .container{
-       flex-direction: row;
-       justify-content: space-around;
-    }
-
-    .calidad .container .img{
-        width: 25vw;
+    .calidad .intro,
+    .calidad .certificacion p,
+    .calidad .garantia p{
+        font-size: 1.15rem;
     }
 }

@@ -1,13 +1,6 @@
 .evidencia{
-    background-color: #d0d0d0;
-    padding: 3rem 2rem;
-}
-
-.evidencia .titulo{
-    color: #ff5a34;
-    font-family: 'MontrealBold';
-    margin-bottom: 1.5rem;
-    font-size: 3rem;
+    background-color: var(--crema);
+    padding: 4.5rem 1.5rem;
 }
 
 .evidencia .listado{
@@ -274,3 +267,105 @@
 
 
 
+
+
+/* Diseño actual */
+.evidencia .tituloSeccion{
+    margin-bottom: 2rem;
+}
+
+.evidencia .containerTexto > .texto{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.evidencia .subtitulo{
+    font-size: 1.3rem;
+    color: var(--gris-texto);
+}
+
+.evidencia .beneficios{
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+.evidencia .beneficios .items{
+    background: var(--blanco);
+    padding: 1.75rem;
+    line-height: 1.6;
+    border-top: 3px solid var(--naranja);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    text-align: left;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.evidencia .beneficios .items:not(.fichaItem):hover{
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-hover);
+}
+
+.evidencia .beneficios .items > strong:first-child{
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.evidencia .beneficios .fichaItem{
+    grid-column: 1 / -1;
+    background: none;
+    border: 0;
+    box-shadow: none;
+    padding: 1.5rem 0 0;
+    text-align: center;
+}
+
+.evidencia .ficha{
+    background: var(--blanco);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    padding: 1.5rem;
+    max-width: 760px;
+    margin: 1rem auto 0;
+}
+
+.evidencia .ficha .imgTabla{
+    display: block;
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+@media (min-width: 1024px){
+    .evidencia{
+        padding: 7rem 10vw;
+    }
+
+    .evidencia .beneficios{
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .evidencia .titulo{
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 1440px){
+    .evidencia .titulo{
+        font-size: 3.5rem;
+        padding-right: 0;
+    }
+
+    .evidencia .texto,
+    .evidencia .items{
+        font-size: 1.2rem;
+    }
+
+    .evidencia .ficha .imgTabla{
+        width: 100%;
+    }
+}

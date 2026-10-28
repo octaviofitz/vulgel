@@ -1,0 +1,108 @@
+.marcas{
+    background-color: var(--crema);
+    padding: 4.5rem 1.5rem;
+    text-align: center;
+}
+
+.marcas .bajada{
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+.marcas .grilla{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.marcas .marca{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 2.25rem 1.75rem 2rem;
+    background: var(--blanco);
+    border-top: 3px solid var(--celeste);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    text-decoration: none;
+    color: var(--tinta);
+    transition: border-color .3s ease, transform .3s ease, box-shadow .3s ease;
+}
+
+.marcas .marca:hover,
+.marcas .marca:focus-visible{
+    border-top-color: var(--naranja);
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-hover);
+}
+
+.marcas .logoMarca{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 96px;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.marcas .logoMarca img{
+    max-height: 96px;
+    max-width: 70%;
+    object-fit: contain;
+    transition: transform .3s ease;
+}
+
+.marcas .marca:hover .logoMarca img{
+    transform: scale(1.05);
+}
+
+.marcas .rubro{
+    font-family: 'MontrealBold';
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gris-texto);
+}
+
+.marcas .descripcion{
+    font-size: 1rem;
+    line-height: 1.55;
+    color: var(--tinta);
+    max-width: 30ch;
+    flex: 1;
+}
+
+.marcas .visitar{
+    margin-top: 0.5rem;
+    font-family: 'MontrealBold';
+    font-size: 0.95rem;
+    color: var(--naranja);
+}
+
+.marcas .flecha{
+    display: inline-block;
+    transition: transform .3s ease;
+}
+
+.marcas .marca:hover .flecha{
+    transform: translateX(5px);
+}
+
+@media(min-width: 768px){
+    .marcas{
+        padding: 6rem 10vw;
+    }
+
+    .marcas .grilla{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(min-width: 1024px){
+    .marcas{
+        padding: 7rem 10vw;
+    }
+}

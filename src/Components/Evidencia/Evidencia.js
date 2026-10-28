@@ -21,14 +21,14 @@ function Evidencia() {
     return (
         <section className='evidencia' id='evidencia'>
            
-                <h2 className='titulo'>Evidencia de Eficacia y Especificaciones Técnicas</h2>
+                <h2 className='titulo tituloSeccion centrado'>Evidencia de Eficacia y Especificaciones Técnicas</h2>
                 
                 <div className='containerTexto'>
                 <p className='texto'><strong className='subtitulo'>Mecanismo de Acción Dual y Beneficios Industriales</strong></p>
-                <ul>
+                <ul className='beneficios'>
                     <li className='items'><strong>Estructura Adsorbente y Capacidad de Intercambio Catiónico (CIC):</strong> Su estructura trilaminar y su carga negativa le otorgan sitios de unión activos para capturar micotoxinas y cationes de metales pesados mediante enlaces estables, logrando que sean eliminados de manera segura a través de las excretas.</li>
                     <li className='items'><strong>Cohesión para Pelletizado y Protección de Equipos:</strong> Aumenta la durabilidad del pellet, reduce la presencia de finos y preserva la integridad del alimento. Asimismo, al carecer de residuos abrasivos significativos, <strong>preserva los componentes críticos del proceso de peletización (dados y rodillos)</strong>, extendiendo su vida útil.</li>
-                    <li className='items'><strong><strong>Ficha Físico-Química de VULGEL DUO</strong></strong>
+                    <li className='items fichaItem'><strong>Ficha Físico-Química de VULGEL DUO</strong>
                        
                 {/*     <div className="cards">
 
@@ -84,8 +84,8 @@ function Evidencia() {
 
                     </li>
                 </ul>
-                <div>
-  <img className='imgTabla' src={Tabla} alt='tabla' />
+                <div className='ficha'>
+  <img className='imgTabla' src={Tabla} alt='Ficha físico-química de VULGEL DUO' />
 </div>
             </div>
         </section>

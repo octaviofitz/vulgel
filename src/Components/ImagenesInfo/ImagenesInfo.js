@@ -12,15 +12,15 @@ function ImagenesInfo() {
         <section className='imagenesInfo'>
             
             <div>
-                <img src={Card1} alt='banner1' className='img' />
+                <img src={Card1} alt='Laboratorio de control de calidad' className='img' loading='lazy' />
                     </div>
 
                     <div>
-                <img src={Card2} alt='banner2' className='img' />
+                <img src={Card2} alt='Acopio de bentonita' className='img' loading='lazy' />
                     </div>
 
                     <div>
-                <img src={Card3} alt='banner3' className='img' />
+                <img src={Card3} alt='Cantera de bentonita' className='img' loading='lazy' />
                     </div>
             
         </section>

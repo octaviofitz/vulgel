@@ -8,7 +8,11 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import './contacto.css';
 
-const theme = createTheme({});
+const theme = createTheme({
+  palette: {
+    primary: { main: '#171717' },
+  },
+});
 
 function Contacto() {
   const [name, setName] = useState('');
@@ -148,7 +152,7 @@ function Contacto() {
       <section className="contacto" id="contacto">
         <div className="containerTexto">
           <div>
-            <h4 className="titulo">Contacto</h4>
+            <h2 className="titulo tituloSeccion">Contacto</h2>
             <p className="texto">
             <strong>¿Querés proteger la salud de tus animales, mejorar la calidad del pellet y cuidar la vida útil de tu maquinaria?</strong>
             </p>
@@ -179,7 +183,7 @@ function Contacto() {
                 variant="outlined"
                 sx={{
                   backgroundColor: '#fff',
-                  borderRadius: '4px',
+                  borderRadius: '6px',
                 }}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -197,7 +201,7 @@ function Contacto() {
                 type="email"
                 sx={{
                   backgroundColor: '#fff',
-                  borderRadius: '8px',
+                  borderRadius: '6px',
                 }}
                 value={mail}
                 onChange={(e) => setMail(e.target.value)}
@@ -216,7 +220,7 @@ function Contacto() {
                 variant="outlined"
                 sx={{
                   backgroundColor: '#fff',
-                  borderRadius: '8px',
+                  borderRadius: '6px',
                 }}
                 value={telefono}
                 onChange={(e) => setTelefono(e.target.value)}
@@ -235,7 +239,7 @@ function Contacto() {
                 rows={4}
                 sx={{
                   backgroundColor: '#fff',
-                  borderRadius: '8px',
+                  borderRadius: '6px',
                 }}
                 value={mensaje}
                 onChange={(e) => setMensaje(e.target.value)}

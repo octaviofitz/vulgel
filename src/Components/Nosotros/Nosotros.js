@@ -6,13 +6,13 @@ function Nosotros() {
     return (
         <section className='nosotros' id='adsorbente'>
         <div className='containerTitulo'>
-            <h2 className='titulo'>El Adsorbente Natural con Poder Dual</h2>
+            <h2 className='titulo tituloSeccion'>El Adsorbente Natural con Poder Dual</h2>
             </div>
 
             <div className='containerTexto'>
             <p className='texto'><strong>VULGEL DUO</strong> es la solución definitiva basada en Bentonita Sódica Natural, especialmente indicada para neutralizar los problemas causados por micotoxinas e infecciones como la aflatoxicosis en bovinos, aves, cerdos, equinos y peces.</p>
             <p className='texto'>Tal como su nombre lo indica, <strong>VULGEL DUO</strong> posee un potencial dual único en el mercado:</p>
-            <ul>
+            <ul className='dual'>
                 <li className='texto'>Adsorción molecular de micotoxinas y contaminantes.</li>
                 <li className='texto'>Aglutinación eficiente y cuidado industrial del peletizado.</li>
             </ul>

@@ -1,57 +1,81 @@
 .contacto{
-    background-color: #d0d0d0;
-    padding: 2rem;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background-color: var(--celeste);
+    padding: 4.5rem 1.5rem;
+}
+
+/* Isologo grande como marca de agua */
+.contacto::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: -60px;
+    bottom: -80px;
+    width: 340px;
+    height: 560px;
+    background: url('../../IMG/Index/Isologo.webp') no-repeat center / contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+.contacto .MuiTextField-root .MuiOutlinedInput-root{
+    box-shadow: var(--sombra);
 }
 
 .contacto .titulo{
-    color: #ff5a34;
-    font-family: 'MontrealBold';
     margin-bottom: 1.5rem;
-    font-size: 3rem;
 }
 
 .contacto .texto{
-    padding-bottom: 2rem;
-    font-size: 1.15rem;
-}
-
-.contacto .texto:last-child{
-    margin-top: -2.5rem;
-    padding-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
 .contacto .box{
-    margin-left: -1.5vw;
+    margin: 1.5rem -8px 0;
+}
+
+.contacto .MuiOutlinedInput-notchedOutline{
+    border-color: transparent;
 }
 
 .contacto .boton{
     display: flex;
-    margin: 1.5rem auto;
-    background-color: #ff5a34;
-    color: white;
-    font-size: 0.9rem;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    font-weight: 400;
+    margin: 1.25rem 8px 0 auto;
+    background-color: var(--naranja);
+    color: var(--blanco);
+    font-family: 'MontrealBold';
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    border-radius: var(--radio);
+    box-shadow: 0 8px 22px rgba(255, 60, 0, 0.25);
+    padding: 0.85rem 2.25rem;
+    transition: background-color .25s ease, color .25s ease;
 }
 
 .contacto .boton:hover{
-    color: white;
-    font-weight: 600;
+    background-color: var(--tinta);
+    color: var(--blanco);
+    box-shadow: var(--sombra-hover);
 }
 
 .containerIMG{
     display: none;
 }
 
-.contacto .negrita{
-    color: #ff5a34;
-    font-weight: 900;
+@media(max-width: 767px){
+    .contacto .boton{
+        margin: 1.25rem auto 0;
+    }
 }
-
 
 @media(min-width: 768px){
     .contacto{
-        padding: 5vh 10vw;
+        padding: 6rem 10vw;
     }
 }
 
@@ -59,31 +83,26 @@
     .contacto{
         display: flex;
         justify-content: space-between;
-        padding: 8vh 10vw;
-        padding-bottom: 6vh;
+        gap: 6vw;
+        padding: 7rem 10vw;
     }
 
     .contacto .containerTexto{
-        width: 35vw;
+        width: 38%;
     }
 
     .contacto .containerBox{
-        width: 35vw;
+        flex: 1;
+        max-width: 640px;
     }
 
-    .contacto .titulo{
-        font-size: 6vh;
-    }
-
-    .contacto .texto{
-        font-size: 1.15rem;
-        margin-right: 1rem;
+    .contacto .box{
+        margin-top: 0;
     }
 }
 
 @media(min-width: 1440px){
     .contacto .texto{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
-
 }

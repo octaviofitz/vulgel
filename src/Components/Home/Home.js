@@ -5,6 +5,7 @@ import Contacto from '../Contacto/Contacto';
 import Evidencia from '../Evidencia/Evidencia';
 import ImagenesInfo from '../ImagenesInfo/ImagenesInfo';
 import Calidad from '../Calidad/Calidad';
+import Marcas from '../Marcas/Marcas';
 
 import './home.css';
 
@@ -17,6 +18,7 @@ function Home() {
             <Evidencia />
             <ImagenesInfo />
             <Calidad />
+            <Marcas />
             <Contacto />
         </section>
     );

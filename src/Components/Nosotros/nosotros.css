@@ -1,67 +1,76 @@
 .nosotros{
-    padding: 2rem;
-    background-color: #fff;
-    /* border-bottom: 4px solid #efca16;
-    border-top: 4px solid #efca16; */
+    padding: 4.5rem 1.5rem;
+    background-color: var(--blanco);
 }
 
 .nosotros .titulo{
-    color: #aecee0;
-    font-family: 'MontrealBold';
-    margin-bottom: 1.5rem;
-    font-size: 3rem;
-    font-weight: 900;
+    font-size: 2.4rem;
 }
 
 .nosotros .texto{
-    font-size: 1.15rem;
+    font-size: 1.1rem;
+    line-height: 1.65;
+    margin-bottom: 1rem;
+    color: var(--tinta);
+}
+
+.nosotros .dual{
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 1.75rem;
+    border-left: 3px solid var(--naranja);
+    border-radius: var(--radio);
+    background: var(--crema);
+    overflow: hidden;
+}
+
+.nosotros .dual li{
+    margin: 0;
+    padding: 0.9rem 1.25rem;
+    font-family: 'MontrealBold';
+}
+
+.nosotros .dual li + li{
+    border-top: 1px solid #e6ddd2;
 }
 
 @media(min-width: 768px){
     .nosotros{
-        padding: 5vh 10vw;
+        padding: 6rem 10vw;
     }
 }
 
 @media (min-width: 1024px){
     .nosotros{
         display: flex;
-        gap: 4vw; /* espacio entre título y texto */
-        align-items: flex-start; /* o center si querés centrar verticalmente */
-        padding: 5vw 7vw;
+        gap: 6vw;
+        align-items: flex-start;
+        padding: 7rem 10vw;
     }
 
-   .nosotros .containerTitulo{
-        width: 25vw;
+    .nosotros .containerTitulo{
+        width: 30%;
+        flex-shrink: 0;
+        position: sticky;
+        top: 120px;
     }
 
     .nosotros .titulo{
-        font-size: 3rem; /* más impacto visual */
-        line-height: 1.1;
-        padding: 0;
+        font-size: 3rem;
     }
 
-   .nosotros .containerTexto{
-        flex: 1; /* ocupa el resto del espacio */
+    .nosotros .containerTexto{
+        flex: 1;
+        max-width: 760px;
     }
 }
 
 @media (min-width: 1440px){
-
-    .nosotros{
-        padding: 4vw 10vw;
-    }
-
-    .nosotros .containerTitulo{
-        width: 25vw;
-    }
-
     .nosotros .titulo{
-        font-size: 4.25rem; /* más impacto visual */
-        line-height: 1.1;
+        font-size: 3.5rem;
     }
 
     .nosotros .texto{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 }

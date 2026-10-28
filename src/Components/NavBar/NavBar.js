@@ -7,7 +7,7 @@ import './navBar.css';
 
 function BasicExample() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary navBar">
+    <Navbar expand="lg" sticky="top" className="navBar">
       <Container
         style={{
           display: 'flex',
@@ -33,7 +33,10 @@ function BasicExample() {
             <Nav.Link className="link" href="#calidad">
               Calidad
             </Nav.Link>
-            <Nav.Link className="link" href="#contacto">
+            <Nav.Link className="link" href="#marcas">
+              Marcas
+            </Nav.Link>
+            <Nav.Link className="link botonNav" href="#contacto">
               Contacto
             </Nav.Link>
           </Nav>

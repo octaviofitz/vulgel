@@ -1,16 +1,92 @@
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
 
+/* Colores de la carpeta VULGEL DUO */
+:root{
+  --crema: #f5efe8;
+  --tinta: #171717;
+  --naranja: #ff3c00;
+  --celeste: #a1cfe2;
+  --blanco: #ffffff;
+  --gris-texto: #4d4a47;
+  --radio: 6px;
+  --sombra: 0 6px 22px rgba(23, 23, 23, 0.07);
+  --sombra-hover: 0 14px 34px rgba(23, 23, 23, 0.12);
+}
+
+/* Patrón del isologo, muy tenue, para algunos fondos (como en la carpeta) */
+.evidencia,
+.marcas{
+  position: relative;
+  isolation: isolate;
+}
+
+.evidencia::before,
+.marcas::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url('./IMG/Fondos/patron.png');
+  background-size: 180px 180px;
+  opacity: 0.07;
+  pointer-events: none;
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: black;
   font-family: 'MontrealMedium';
   font-weight: 200;
 }
 
+body{
+  color: var(--tinta);
+  background: var(--blanco);
+}
+
+h1, h2, h3, h4, h5, p, li{
+  color: inherit;
+}
+
+/* Título de sección */
+.tituloSeccion{
+  font-family: 'MontrealBold';
+  font-weight: normal;
+  color: var(--tinta);
+  font-size: 2.4rem;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.25rem;
+}
+
+.tituloSeccion::after{
+  content: "";
+  display: block;
+  width: 56px;
+  height: 4px;
+  background: var(--naranja);
+  margin-top: 1rem;
+}
+
+.centrado{
+  text-align: center;
+}
+
+.centrado::after{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1024px){
+  .tituloSeccion{
+    font-size: 3rem;
+  }
+}
+
 strong{
-  font-weight: 700;
+  font-family: 'MontrealBold';
+  font-weight: normal;
 }
 
 .items{
@@ -36,3 +112,36 @@ ul{
   font-style: normal;
 }
 
+
+/* Aparición al hacer scroll (solo si el script está activo; sin JavaScript todo se ve) */
+.animado .revelar{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .8s ease, transform .8s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--retraso, 0ms);
+}
+
+.animado .revelar.visible{
+  opacity: 1;
+  transform: none;
+}
+
+.animado .revelarFoto{
+  transform: translateY(40px) scale(0.94);
+  transition-duration: 1s;
+}
+
+.animado .revelarFoto .img{
+  transform: scale(1.15);
+  transition: transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animado .revelarFoto.visible .img{
+  transform: scale(1);
+}
+
+/* Los botones y tarjetas que ya se movían con hover vuelven a su transición normal al terminar de aparecer */
+.animado .marcas .marca.revelar.visible{
+  transition: opacity .8s ease, transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+  transition-delay: 0ms;
+}

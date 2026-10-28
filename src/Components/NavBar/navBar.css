@@ -1,36 +1,40 @@
 .navBar {
-  padding: 8px 3px 10px;
+  background-color: var(--blanco);
+  border-bottom: 1px solid #ece6df;
+  padding: 10px 0;
 }
 
 .navBar .logo {
-  height: 7vh !important;
-  max-width: 25VW !important;
+  height: 58px;
+  width: auto;
 }
 
 .navBar .link {
-  color: #ff5a34;
-  text-align: center;
-  padding: 10px;
-  text-transform: uppercase;
-
-  /* 🔽 Subrayado custom con control total */
+  color: var(--tinta);
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  padding: 10px 14px !important;
   position: relative;
-  display: inline-block;     /* asegura que el ::after tome el ancho del texto */
-  text-decoration: none;     /* sin subrayado nativo */
+  text-decoration: none;
+  transition: color .2s ease;
 }
 
 .navBar .link::after {
   content: "";
   position: absolute;
-  left: 15%;
-  right: 0;
-  height: 3px;
-  width: 70%;
-  background: #aecee0;
-  bottom: -1.5px;              /* 🔑 bajá o subí la línea (ej: -6, -10) */
+  left: 14px;
+  right: 14px;
+  bottom: 4px;
+  height: 2px;
+  background: var(--naranja);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform .2s ease;
+  transition: transform .25s ease;
+}
+
+.navBar .link:hover,
+.navBar .link:focus-visible {
+  color: var(--naranja);
 }
 
 .navBar .link:hover::after,
@@ -38,61 +42,46 @@
   transform: scaleX(1);
 }
 
+.navBar .botonNav {
+  background: var(--tinta);
+  color: var(--blanco) !important;
+  font-family: 'MontrealBold';
+  border-radius: var(--radio);
+  margin-left: 10px;
+  padding: 10px 22px !important;
+  transition: background-color .2s ease;
+}
+
+.navBar .botonNav::after {
+  display: none;
+}
+
+.navBar .botonNav:hover,
+.navBar .botonNav:focus-visible {
+  background: var(--naranja);
+  color: var(--blanco) !important;
+}
+
 .navbar-toggler {
-  font-size: 0.9rem;
-  color: #aecee0;
-  border: transparent;
+  border: 0;
+  box-shadow: none !important;
 }
 
-.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
-  color: #aecee0;
-}
-
-.w-100 {
-  margin: 10px 0;
-}
-
-@media (min-width: 768px) {
-  .navBar {
-    padding: 0.4rem 1rem 0.7rem !important;
-  }
-
+@media (max-width: 991px) {
   .navBar .logo {
-    height: 7vh !important;
-    max-width: 20vw;
-    padding-left: 2rem !important;
-    margin-top: 0rem !important;
-  }
-}
-
-@media (min-width: 1024px) {
-  .navBar {
-    padding: 15px 0 18px !important;
-    display: flex;
-    justify-content: space-between;
+    height: 46px;
   }
 
-  .navBar .logo {
-    max-width: 28vw;
+  .navBar .navbar-nav {
+    padding: 12px 0 8px;
   }
 
-  .navBar .link {
-    padding: 3px 10px;
-    border-right: 1px solid #aecee0;
+  .navBar .link::after {
+    display: none;
   }
 
-  .navBar .link:last-child {
-    border-right: none;
-  }
-
-  /* Alinear enlaces a la derecha en desktop */
-  .navBar .navbar-collapse {
-    justify-content: flex-end;
-  }
-}
-
-@media (min-width: 1440px) {
-  .navBar .logo {
-    width: 9.5vw;
+  .navBar .botonNav {
+    margin: 8px 0 0;
+    text-align: center;
   }
 }
